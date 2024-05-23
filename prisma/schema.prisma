@@ -22,6 +22,9 @@ model Product {
   image  String
   categoryId  Int
   artisanId Int
+  carroseulImages String[]
+  description String?
+  dimensions String?
   category  Category  @relation(fields: [categoryId], references: [id])
   artisan  Artisan  @relation(fields: [artisanId], references: [id])
   reviews Review[]

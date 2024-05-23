@@ -10,14 +10,16 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="border bg-white">
       <div className="relative w-full h-96">
-        <Image
-          width={400}
-          height={500}
-          layout="responsive"
-          objectFit="cover"
-          src={`/products/${product.image}.jpg`}
-          alt={`${product.name} product image`}
-        />
+        <a href={`/products/${product.id}`}>
+          <Image
+            width={400}
+            height={500}
+            layout="responsive"
+            objectFit="cover"
+            src={`/products/${product.image}.jpg`}
+            alt={`${product.name} product image`}
+          />
+        </a>
       </div>
       <div className="p-5">
         <h3 className="text-2xl font-bold">{product.name}</h3>
